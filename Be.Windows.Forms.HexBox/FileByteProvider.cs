@@ -99,7 +99,7 @@ namespace Be.Windows.Forms
 		/// </summary>
 		~FileByteProvider()
 		{
-			Dispose();
+			Dispose(false);
 		}
 
 		/// <summary>
@@ -256,16 +256,25 @@ namespace Be.Windows.Forms
 		/// </summary>
 		public void Dispose()
 		{
-			if(_fileStream != null)
-			{
-				_fileName = null;
-
-				_fileStream.Close();
-				_fileStream = null;
-			}
-
+			Dispose(true);
 			GC.SuppressFinalize(this);
 		}
-		#endregion
-	}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="disposing"></param>
+		protected virtual void Dispose(bool disposing)
+		{
+			if (disposing) { }
+            if (_fileStream != null)
+            {
+                _fileName = null;
+
+                _fileStream.Close();
+                _fileStream = null;
+            }
+        }
+        #endregion
+    }
 }

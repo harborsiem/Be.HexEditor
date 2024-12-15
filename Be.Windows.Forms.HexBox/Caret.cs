@@ -1,4 +1,7 @@
 ﻿using System;
+using Windows.Win32;
+using Windows.Win32.Foundation;
+using Windows.Win32.Graphics.Gdi;
 
 namespace Be.Windows.Forms
 {
@@ -8,7 +11,7 @@ namespace Be.Windows.Forms
         {
             try
             {
-                return NativeMethods.CreateCaret(hWnd, hBitmap, nWidth, nHeight);
+                return PInvoke.CreateCaret(new HWND(hWnd), new HBITMAP(hBitmap), nWidth, nHeight);
             }
             catch (Exception ex)
             {
@@ -24,7 +27,7 @@ namespace Be.Windows.Forms
         {
             try
             {
-                return NativeMethods.ShowCaret(hWnd);
+                return PInvoke.ShowCaret(new HWND(hWnd));
             }
             catch (Exception ex)
             {
@@ -40,7 +43,7 @@ namespace Be.Windows.Forms
         {
             try
             {
-                return NativeMethods.DestroyCaret();
+                return PInvoke.DestroyCaret();
             }
             catch (Exception ex)
             {
@@ -56,7 +59,7 @@ namespace Be.Windows.Forms
         {
             try
             {
-                return NativeMethods.SetCaretPos(X, Y);
+                return PInvoke.SetCaretPos(X, Y);
             }
             catch (Exception ex)
             {

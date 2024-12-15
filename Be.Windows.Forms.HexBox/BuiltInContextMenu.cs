@@ -53,7 +53,8 @@ namespace Be.Windows.Forms
         /// <param name="e">the event data</param>
         void HexBox_ByteProviderChanged(object sender, EventArgs e)
         {
-            CheckBuiltInContextMenu();
+            if (!_hexBox.SuppressBuiltInContextMenu)
+                CheckBuiltInContextMenu();
         }
         /// <summary>
         /// Assigns the ContextMenuStrip control to the HexBox control.
@@ -131,7 +132,8 @@ namespace Be.Windows.Forms
         {
             get { return _copyMenuItemText; }
             set { _copyMenuItemText = value; }
-        } string _copyMenuItemText;
+        }
+        string _copyMenuItemText;
 
         /// <summary>
         /// Gets or sets the custom text of the "Cut" ContextMenuStrip item.
@@ -141,7 +143,8 @@ namespace Be.Windows.Forms
         {
             get { return _cutMenuItemText; }
             set { _cutMenuItemText = value; }
-        } string _cutMenuItemText;
+        }
+        string _cutMenuItemText;
 
         /// <summary>
         /// Gets or sets the custom text of the "Paste" ContextMenuStrip item.
@@ -151,7 +154,8 @@ namespace Be.Windows.Forms
         {
             get { return _pasteMenuItemText; }
             set { _pasteMenuItemText = value; }
-        } string _pasteMenuItemText;
+        }
+        string _pasteMenuItemText;
 
         /// <summary>
         /// Gets or sets the custom text of the "Select All" ContextMenuStrip item.
@@ -161,7 +165,8 @@ namespace Be.Windows.Forms
         {
             get { return _selectAllMenuItemText; }
             set { _selectAllMenuItemText = value; }
-        } string _selectAllMenuItemText = null;
+        }
+        string _selectAllMenuItemText = null;
 
         /// <summary>
         /// Gets the text of the "Cut" ContextMenuStrip item.
@@ -188,7 +193,8 @@ namespace Be.Windows.Forms
         {
             get { return _cutMenuItemImage; }
             set { _cutMenuItemImage = value; }
-        } Image _cutMenuItemImage = null;
+        }
+        Image _cutMenuItemImage = null;
         /// <summary>
         /// Gets or sets the image of the "Copy" ContextMenuStrip item.
         /// </summary>
@@ -197,7 +203,8 @@ namespace Be.Windows.Forms
         {
             get { return _copyMenuItemImage; }
             set { _copyMenuItemImage = value; }
-        } Image _copyMenuItemImage = null;
+        }
+        Image _copyMenuItemImage = null;
         /// <summary>
         /// Gets or sets the image of the "Paste" ContextMenuStrip item.
         /// </summary>
@@ -206,7 +213,8 @@ namespace Be.Windows.Forms
         {
             get { return _pasteMenuItemImage; }
             set { _pasteMenuItemImage = value; }
-        } Image _pasteMenuItemImage = null;
+        }
+        Image _pasteMenuItemImage = null;
         /// <summary>
         /// Gets or sets the image of the "Select All" ContextMenuStrip item.
         /// </summary>
@@ -215,6 +223,68 @@ namespace Be.Windows.Forms
         {
             get { return _selectAllMenuItemImage; }
             set { _selectAllMenuItemImage = value; }
-        } Image _selectAllMenuItemImage = null;
+        }
+        Image _selectAllMenuItemImage = null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="disposing"></param>
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+            if (disposing)
+            {
+                if (_cutMenuItemImage != null)
+                {
+                    _cutMenuItemImage.Dispose();
+                    _cutMenuItemImage = null;
+                }
+                if (_copyMenuItemImage != null)
+                {
+                    _copyMenuItemImage.Dispose();
+                    _copyMenuItemImage = null;
+                }
+                if (_pasteMenuItemImage != null)
+                {
+                    _pasteMenuItemImage.Dispose();
+                    _pasteMenuItemImage = null;
+                }
+                if (_selectAllMenuItemImage != null)
+                {
+                    _selectAllMenuItemImage.Dispose();
+                    _selectAllMenuItemImage = null;
+                }
+                if (_copyToolStripMenuItem != null)
+                {
+                    _copyToolStripMenuItem.Click -= CopyMenuItem_Click;
+                    _copyToolStripMenuItem.Dispose();
+                    _copyToolStripMenuItem = null;
+                }
+                if (_cutToolStripMenuItem != null)
+                {
+                    _cutToolStripMenuItem.Click -= CutMenuItem_Click;
+                    _cutToolStripMenuItem.Dispose();
+                    _cutToolStripMenuItem = null;
+                }
+                if (_pasteToolStripMenuItem != null)
+                {
+                    _pasteToolStripMenuItem.Click -= PasteMenuItem_Click;
+                    _pasteToolStripMenuItem.Dispose();
+                    _pasteToolStripMenuItem = null;
+                }
+                if (_selectAllToolStripMenuItem != null)
+                {
+                    _selectAllToolStripMenuItem.Click -= SelectAllMenuItem_Click;
+                    _selectAllToolStripMenuItem.Dispose();
+                    _selectAllToolStripMenuItem = null;
+                }
+                if (_contextMenuStrip != null) {
+                    _contextMenuStrip.Opening -= BuildInContextMenuStrip_Opening;
+                    _contextMenuStrip.Dispose();
+                    _contextMenuStrip = null;
+                }
+            }
+        }
     }
 }

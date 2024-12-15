@@ -1,5 +1,15 @@
 Version history
 
+2.0.0
+- New feature: Update project and dependencies to .NET 8 and .Net Framework 4.6.2
+- Improvement: NativeMethods to Nuget package Microsoft/Cswin32
+- New property in Hexbox: SuppressBuildInContextMenu
+- Improvement: HighlightedRegion Intellisence comments
+- Bugfix: Toolbox item for HexBox
+- Font set to Consolas, 10pt
+- DesignMode extended for new Core Designer
+- other bugfixes
+
 1.8.0
 - New feature: Update project and dependencies to .NET 5
 - Improvement: Remove unnecessary usings
