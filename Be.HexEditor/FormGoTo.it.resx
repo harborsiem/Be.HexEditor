@@ -123,7 +123,7 @@
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Annulla</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="groupBox1.Text" xml:space="preserve">
     <value>Vai</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

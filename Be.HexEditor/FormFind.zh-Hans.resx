@@ -123,7 +123,7 @@
   <data name="rbHex.Text" xml:space="preserve">
     <value>十六进制(&amp;H)</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="groupBox1.Text" xml:space="preserve">
     <value>查找</value>
   </data>
   <data name="btnOK.Text" xml:space="preserve">

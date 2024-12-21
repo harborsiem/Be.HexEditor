@@ -1,0 +1,12 @@
+MonitorFromWindow
+MonitorFromRect
+MonitorFromPoint
+MONITORINFOF_PRIMARY
+GetDpiForMonitor
+GetDeviceCaps
+GetDC
+ReleaseDC
+WM_DPICHANGED
+HRESULT
+S_OK
+//LOWORD

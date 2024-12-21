@@ -10,7 +10,7 @@ namespace Be.HexEditor
     {
         public const string SoftwareName = "Be.HexEditor";
 
-        public static FormHexEditor ApplictionForm;
+        public static FormHexEditor ApplicationForm;
 
         [STAThread()]
         static void Main(string[] args)
@@ -22,13 +22,16 @@ namespace Be.HexEditor
                 Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(l);
             }
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            //Application.EnableVisualStyles();
+            //Application.SetCompatibleTextRenderingDefault(false);
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
 
-            ApplictionForm = new FormHexEditor();
+            ApplicationForm = new FormHexEditor();
             if (args.Length > 0 && System.IO.File.Exists(args[0]))
-                ApplictionForm.OpenFile(args[0]);
-            Application.Run(ApplictionForm);
+                ApplicationForm.OpenFile(args[0]);
+            Application.Run(ApplicationForm);
         }
 
         public static DialogResult ShowError(Exception ex)

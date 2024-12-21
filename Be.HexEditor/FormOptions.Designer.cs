@@ -29,138 +29,138 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormOptions));
-            this.tabControl = new System.Windows.Forms.TabControl();
-            this.generalTabPage = new System.Windows.Forms.TabPage();
-            this.languageSettingsGroupBox = new System.Windows.Forms.GroupBox();
-            this.selectLanguageLabel = new System.Windows.Forms.Label();
-            this.languageComboBox = new System.Windows.Forms.ComboBox();
-            this.useSystemLanguageCheckBox = new System.Windows.Forms.CheckBox();
-            this.recentFilesGroupBox = new System.Windows.Forms.GroupBox();
-            this.clearRecentFilesButton = new System.Windows.Forms.Button();
-            this.recentFilesMaxlabel = new System.Windows.Forms.Label();
-            this.recentFilesMaxTextBox = new System.Windows.Forms.TextBox();
-            this.okButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabControl.SuspendLayout();
-            this.generalTabPage.SuspendLayout();
-            this.languageSettingsGroupBox.SuspendLayout();
-            this.recentFilesGroupBox.SuspendLayout();
-            this.flowLayoutPanel.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // tabControl
-            // 
-            resources.ApplyResources(this.tabControl, "tabControl");
-            this.tabControl.Controls.Add(this.generalTabPage);
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            // 
-            // generalTabPage
-            // 
-            this.generalTabPage.Controls.Add(this.languageSettingsGroupBox);
-            this.generalTabPage.Controls.Add(this.recentFilesGroupBox);
-            resources.ApplyResources(this.generalTabPage, "generalTabPage");
-            this.generalTabPage.Name = "generalTabPage";
-            this.generalTabPage.UseVisualStyleBackColor = true;
-            // 
-            // languageSettingsGroupBox
-            // 
-            resources.ApplyResources(this.languageSettingsGroupBox, "languageSettingsGroupBox");
-            this.languageSettingsGroupBox.Controls.Add(this.selectLanguageLabel);
-            this.languageSettingsGroupBox.Controls.Add(this.languageComboBox);
-            this.languageSettingsGroupBox.Controls.Add(this.useSystemLanguageCheckBox);
-            this.languageSettingsGroupBox.Name = "languageSettingsGroupBox";
-            this.languageSettingsGroupBox.TabStop = false;
-            // 
-            // selectLanguageLabel
-            // 
-            resources.ApplyResources(this.selectLanguageLabel, "selectLanguageLabel");
-            this.selectLanguageLabel.Name = "selectLanguageLabel";
-            // 
-            // languageComboBox
-            // 
-            this.languageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.languageComboBox.FormattingEnabled = true;
-            resources.ApplyResources(this.languageComboBox, "languageComboBox");
-            this.languageComboBox.Name = "languageComboBox";
+            useSystemLanguageCheckBox = new System.Windows.Forms.CheckBox();
+            selectLanguageLabel = new System.Windows.Forms.Label();
+            languageComboBox = new System.Windows.Forms.ComboBox();
+            languageSettingsGroupBox = new System.Windows.Forms.GroupBox();
+            recentFilesMaxlabel = new System.Windows.Forms.Label();
+            recentFilesMaxTextBox = new System.Windows.Forms.TextBox();
+            clearRecentFilesButton = new System.Windows.Forms.Button();
+            recentFilesGroupBox = new System.Windows.Forms.GroupBox();
+            generalTabPage = new System.Windows.Forms.TabPage();
+            tabControl = new System.Windows.Forms.TabControl();
+            okButton = new System.Windows.Forms.Button();
+            cancelButton = new System.Windows.Forms.Button();
+            flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            languageSettingsGroupBox.SuspendLayout();
+            recentFilesGroupBox.SuspendLayout();
+            generalTabPage.SuspendLayout();
+            tabControl.SuspendLayout();
+            flowLayoutPanel.SuspendLayout();
+            SuspendLayout();
             // 
             // useSystemLanguageCheckBox
             // 
-            resources.ApplyResources(this.useSystemLanguageCheckBox, "useSystemLanguageCheckBox");
-            this.useSystemLanguageCheckBox.Name = "useSystemLanguageCheckBox";
-            this.useSystemLanguageCheckBox.UseVisualStyleBackColor = true;
-            this.useSystemLanguageCheckBox.CheckedChanged += new System.EventHandler(this.useSystemLanguageCheckBox_CheckedChanged);
+            resources.ApplyResources(useSystemLanguageCheckBox, "useSystemLanguageCheckBox");
+            useSystemLanguageCheckBox.Name = "useSystemLanguageCheckBox";
+            useSystemLanguageCheckBox.UseVisualStyleBackColor = true;
+            useSystemLanguageCheckBox.CheckedChanged += useSystemLanguageCheckBox_CheckedChanged;
             // 
-            // recentFilesGroupBox
+            // selectLanguageLabel
             // 
-            resources.ApplyResources(this.recentFilesGroupBox, "recentFilesGroupBox");
-            this.recentFilesGroupBox.Controls.Add(this.clearRecentFilesButton);
-            this.recentFilesGroupBox.Controls.Add(this.recentFilesMaxlabel);
-            this.recentFilesGroupBox.Controls.Add(this.recentFilesMaxTextBox);
-            this.recentFilesGroupBox.Name = "recentFilesGroupBox";
-            this.recentFilesGroupBox.TabStop = false;
+            resources.ApplyResources(selectLanguageLabel, "selectLanguageLabel");
+            selectLanguageLabel.Name = "selectLanguageLabel";
             // 
-            // clearRecentFilesButton
+            // languageComboBox
             // 
-            resources.ApplyResources(this.clearRecentFilesButton, "clearRecentFilesButton");
-            this.clearRecentFilesButton.Name = "clearRecentFilesButton";
-            this.clearRecentFilesButton.UseVisualStyleBackColor = true;
-            this.clearRecentFilesButton.Click += new System.EventHandler(this.clearRecentFilesButton_Click);
+            languageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            languageComboBox.FormattingEnabled = true;
+            resources.ApplyResources(languageComboBox, "languageComboBox");
+            languageComboBox.Name = "languageComboBox";
+            // 
+            // languageSettingsGroupBox
+            // 
+            resources.ApplyResources(languageSettingsGroupBox, "languageSettingsGroupBox");
+            languageSettingsGroupBox.Controls.Add(selectLanguageLabel);
+            languageSettingsGroupBox.Controls.Add(languageComboBox);
+            languageSettingsGroupBox.Controls.Add(useSystemLanguageCheckBox);
+            languageSettingsGroupBox.Name = "languageSettingsGroupBox";
+            languageSettingsGroupBox.TabStop = false;
             // 
             // recentFilesMaxlabel
             // 
-            resources.ApplyResources(this.recentFilesMaxlabel, "recentFilesMaxlabel");
-            this.recentFilesMaxlabel.Name = "recentFilesMaxlabel";
+            resources.ApplyResources(recentFilesMaxlabel, "recentFilesMaxlabel");
+            recentFilesMaxlabel.Name = "recentFilesMaxlabel";
             // 
             // recentFilesMaxTextBox
             // 
-            resources.ApplyResources(this.recentFilesMaxTextBox, "recentFilesMaxTextBox");
-            this.recentFilesMaxTextBox.Name = "recentFilesMaxTextBox";
+            resources.ApplyResources(recentFilesMaxTextBox, "recentFilesMaxTextBox");
+            recentFilesMaxTextBox.Name = "recentFilesMaxTextBox";
+            // 
+            // clearRecentFilesButton
+            // 
+            resources.ApplyResources(clearRecentFilesButton, "clearRecentFilesButton");
+            clearRecentFilesButton.Name = "clearRecentFilesButton";
+            clearRecentFilesButton.UseVisualStyleBackColor = true;
+            clearRecentFilesButton.Click += clearRecentFilesButton_Click;
+            // 
+            // recentFilesGroupBox
+            // 
+            resources.ApplyResources(recentFilesGroupBox, "recentFilesGroupBox");
+            recentFilesGroupBox.Controls.Add(clearRecentFilesButton);
+            recentFilesGroupBox.Controls.Add(recentFilesMaxlabel);
+            recentFilesGroupBox.Controls.Add(recentFilesMaxTextBox);
+            recentFilesGroupBox.Name = "recentFilesGroupBox";
+            recentFilesGroupBox.TabStop = false;
+            // 
+            // generalTabPage
+            // 
+            generalTabPage.Controls.Add(languageSettingsGroupBox);
+            generalTabPage.Controls.Add(recentFilesGroupBox);
+            resources.ApplyResources(generalTabPage, "generalTabPage");
+            generalTabPage.Name = "generalTabPage";
+            generalTabPage.UseVisualStyleBackColor = true;
+            // 
+            // tabControl
+            // 
+            resources.ApplyResources(tabControl, "tabControl");
+            tabControl.Controls.Add(generalTabPage);
+            tabControl.Name = "tabControl";
+            tabControl.SelectedIndex = 0;
             // 
             // okButton
             // 
-            resources.ApplyResources(this.okButton, "okButton");
-            this.okButton.Name = "okButton";
-            this.okButton.UseVisualStyleBackColor = true;
-            this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            resources.ApplyResources(okButton, "okButton");
+            okButton.Name = "okButton";
+            okButton.UseVisualStyleBackColor = true;
+            okButton.Click += okButton_Click;
             // 
             // cancelButton
             // 
-            resources.ApplyResources(this.cancelButton, "cancelButton");
-            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.UseVisualStyleBackColor = true;
+            resources.ApplyResources(cancelButton, "cancelButton");
+            cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            cancelButton.Name = "cancelButton";
+            cancelButton.UseVisualStyleBackColor = true;
             // 
             // flowLayoutPanel
             // 
-            resources.ApplyResources(this.flowLayoutPanel, "flowLayoutPanel");
-            this.flowLayoutPanel.Controls.Add(this.cancelButton);
-            this.flowLayoutPanel.Controls.Add(this.okButton);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            resources.ApplyResources(flowLayoutPanel, "flowLayoutPanel");
+            flowLayoutPanel.Controls.Add(cancelButton);
+            flowLayoutPanel.Controls.Add(okButton);
+            flowLayoutPanel.Name = "flowLayoutPanel";
             // 
             // FormOptions
             // 
             resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.CancelButton = this.cancelButton;
-            this.Controls.Add(this.flowLayoutPanel);
-            this.Controls.Add(this.tabControl);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FormOptions";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.tabControl.ResumeLayout(false);
-            this.generalTabPage.ResumeLayout(false);
-            this.languageSettingsGroupBox.ResumeLayout(false);
-            this.languageSettingsGroupBox.PerformLayout();
-            this.recentFilesGroupBox.ResumeLayout(false);
-            this.recentFilesGroupBox.PerformLayout();
-            this.flowLayoutPanel.ResumeLayout(false);
-            this.flowLayoutPanel.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            CancelButton = cancelButton;
+            Controls.Add(flowLayoutPanel);
+            Controls.Add(tabControl);
+            FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "FormOptions";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            languageSettingsGroupBox.ResumeLayout(false);
+            languageSettingsGroupBox.PerformLayout();
+            recentFilesGroupBox.ResumeLayout(false);
+            recentFilesGroupBox.PerformLayout();
+            generalTabPage.ResumeLayout(false);
+            tabControl.ResumeLayout(false);
+            flowLayoutPanel.ResumeLayout(false);
+            flowLayoutPanel.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion

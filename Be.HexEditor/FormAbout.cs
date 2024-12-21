@@ -7,15 +7,8 @@ namespace Be.HexEditor
 	/// <summary>
 	/// Summary description for FormAbout.
 	/// </summary>
-	public class FormAbout : Core.FormEx
+	public partial class FormAbout : Form //Core.FormEx
 	{
-		private UCAbout ucAbout1;
-		private Button btnOK;
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		private Container components = null;
-
 		public FormAbout()
 		{
 			//
@@ -28,64 +21,6 @@ namespace Be.HexEditor
 			//
             
 		}
-
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                if (components != null)
-                {
-                    components.Dispose();
-                }
-            }
-            base.Dispose(disposing);
-        }
-
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		private void InitializeComponent()
-		{
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAbout));
-            this.btnOK = new System.Windows.Forms.Button();
-            this.ucAbout1 = new Be.HexEditor.UCAbout();
-            this.SuspendLayout();
-            // 
-            // btnOK
-            // 
-            resources.ApplyResources(this.btnOK, "btnOK");
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
-            // 
-            // ucAbout1
-            // 
-            resources.ApplyResources(this.ucAbout1, "ucAbout1");
-            this.ucAbout1.Name = "ucAbout1";
-            // 
-            // FormAbout
-            // 
-            this.AcceptButton = this.btnOK;
-            resources.ApplyResources(this, "$this");
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.ucAbout1);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "FormAbout";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
-            this.Load += new System.EventHandler(this.FormAbout_CorrectWidth);
-            this.Resize += new System.EventHandler(this.FormAbout_CorrectWidth);
-            this.ResumeLayout(false);
-
-		}
-		#endregion
 
 		private void btnOK_Click(object sender, EventArgs e)
 		{

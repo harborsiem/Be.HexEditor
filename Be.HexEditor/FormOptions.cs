@@ -6,7 +6,7 @@ using Be.HexEditor.Properties;
 
 namespace Be.HexEditor
 {
-    public partial class FormOptions : Core.FormEx
+    public partial class FormOptions : Form //Core.FormEx
     {
         int recentFilesMax;
 
@@ -66,7 +66,7 @@ namespace Be.HexEditor
 
         void clearRecentFilesButton_Click(object sender, EventArgs e)
         {
-            Program.ApplictionForm.RecentFileHandler.Clear();
+            Program.ApplicationForm.RecentFileHandler.Clear();
         }
 
         void okButton_Click(object sender, EventArgs e)

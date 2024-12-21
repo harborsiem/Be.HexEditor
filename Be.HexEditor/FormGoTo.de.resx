@@ -120,10 +120,16 @@
   <data name="label1.Text" xml:space="preserve">
     <value>Byte-Position:</value>
   </data>
+  <data name="chkHexa.Text" xml:space="preserve">
+    <value>Hexadezimal</value>
+  </data>
+  <data name="btnOK.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="groupBox1.Text" xml:space="preserve">
     <value>Gehe Zu</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

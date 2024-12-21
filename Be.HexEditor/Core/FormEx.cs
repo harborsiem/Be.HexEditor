@@ -5,6 +5,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Windows.Win32;
+using Windows.Win32.Foundation;
+using Windows.Win32.Graphics.Gdi;
+using Windows.Win32.UI.HiDpi;
 
 namespace Be.HexEditor.Core
 {
@@ -24,7 +28,7 @@ namespace Be.HexEditor.Core
 
         // New (current) DPI
         float dpiNew = 0;
-        [DefaultValue(0), DesignerSerializationVisibility( DesignerSerializationVisibility.Hidden)]
+        [DefaultValue(0), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public float DpiNew
         {
             get { return dpiNew; }
@@ -57,8 +61,8 @@ namespace Be.HexEditor.Core
         public FormEx()
         {
             //this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.Font = SystemFonts.MessageBoxFont;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            //this.Font = SystemFonts.MessageBoxFont;
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResizeBegin += new System.EventHandler(this.MainForm_ResizeBegin);
             this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
@@ -67,7 +71,7 @@ namespace Be.HexEditor.Core
 
         void MainForm_Load(object sender, EventArgs e)
         {
-            if(!Util.DesignMode)
+            if (!Util.DesignMode)
                 AdjustWindowInitial();
         }
 
@@ -91,15 +95,15 @@ namespace Be.HexEditor.Core
             // Check if Windows 8.1 or newer and if not, ignore message.
             if (!IsEightOneOrNewer()) return;
 
-            const int WM_DPICHANGED = 0x02e0; // 0x02E0 from WinUser.h
+            //const int WM_DPICHANGED = 0x02e0; // 0x02E0 from WinUser.h
 
-            if (m.Msg == WM_DPICHANGED)
+            if (m.Msg == PInvoke.WM_DPICHANGED)
             {
                 // wParam
-                short lo = W32.GetLoWord(m.WParam.ToInt32());
+                ushort lo = (ushort)(m.WParam.ToInt32() & 0xffff); //W32.GetLoWord(m.WParam.ToInt32());
 
                 // lParam
-                W32.RECT r = (W32.RECT)Marshal.PtrToStructure(m.LParam, typeof(W32.RECT));
+                RECT r = (RECT)Marshal.PtrToStructure(m.LParam, typeof(RECT));
 
                 // Hold new DPI as target for adjustment.
                 dpiNew = lo;
@@ -174,10 +178,10 @@ namespace Be.HexEditor.Core
             int widthDiff = (int)(this.ClientSize.Width * factor) - this.ClientSize.Width;
             int heightDiff = (int)(this.ClientSize.Height * factor) - this.ClientSize.Height;
 
-            List<W32.RECT> rectList = new List<W32.RECT>();
+            List<RECT> rectList = new List<RECT>();
 
             // Left-Top corner
-            rectList.Add(new W32.RECT
+            rectList.Add(new RECT
             {
                 left = this.Bounds.Left,
                 top = this.Bounds.Top,
@@ -186,7 +190,7 @@ namespace Be.HexEditor.Core
             });
 
             // Right-Top corner
-            rectList.Add(new W32.RECT
+            rectList.Add(new RECT
             {
                 left = this.Bounds.Left - widthDiff,
                 top = this.Bounds.Top,
@@ -195,7 +199,7 @@ namespace Be.HexEditor.Core
             });
 
             // Left-Bottom corner
-            rectList.Add(new W32.RECT
+            rectList.Add(new RECT
             {
                 left = this.Bounds.Left,
                 top = this.Bounds.Top - heightDiff,
@@ -204,7 +208,7 @@ namespace Be.HexEditor.Core
             });
 
             // Right-Bottom corner
-            rectList.Add(new W32.RECT
+            rectList.Add(new RECT
             {
                 left = this.Bounds.Left - widthDiff,
                 top = this.Bounds.Top - heightDiff,
@@ -215,15 +219,15 @@ namespace Be.HexEditor.Core
             // Get handle to monitor that has the largest intersection with each rectangle.
             for (int i = 0; i <= rectList.Count - 1; i++)
             {
-                W32.RECT rectBuf = rectList[i];
+                RECT rectBuf = rectList[i];
 
-                IntPtr handleMonitor = W32.MonitorFromRect(ref rectBuf, W32.MONITOR_DEFAULTTONULL);
+                HMONITOR handleMonitor = PInvoke.MonitorFromRect(in rectBuf, MONITOR_FROM_FLAGS.MONITOR_DEFAULTTONULL);
 
                 if (handleMonitor != IntPtr.Zero)
                 {
                     // Check if at least Left-Top corner or Right-Top corner is inside monitors.
-                    IntPtr handleLeftTop = W32.MonitorFromPoint(new W32.POINT(rectBuf.left, rectBuf.top), W32.MONITOR_DEFAULTTONULL);
-                    IntPtr handleRightTop = W32.MonitorFromPoint(new W32.POINT(rectBuf.right, rectBuf.top), W32.MONITOR_DEFAULTTONULL);
+                    HMONITOR handleLeftTop = PInvoke.MonitorFromPoint(new Point(rectBuf.left, rectBuf.top), MONITOR_FROM_FLAGS.MONITOR_DEFAULTTONULL);
+                    HMONITOR handleRightTop = PInvoke.MonitorFromPoint(new Point(rectBuf.right, rectBuf.top), MONITOR_FROM_FLAGS.MONITOR_DEFAULTTONULL);
 
                     if ((handleLeftTop != IntPtr.Zero) || (handleRightTop != IntPtr.Zero))
                     {
@@ -232,7 +236,7 @@ namespace Be.HexEditor.Core
                         {
                             // Move this window.
                             this.Location = new Point(rectBuf.left, rectBuf.top);
-                            
+
                             break;
                         }
                     }
@@ -251,7 +255,7 @@ namespace Be.HexEditor.Core
             int widthDiff = (int)(this.ClientSize.Width * factor) - this.ClientSize.Width;
             int heightDiff = (int)(this.ClientSize.Height * factor) - this.ClientSize.Height;
 
-            W32.RECT rect = new W32.RECT()
+            RECT rect = new RECT()
             {
                 left = this.Bounds.Left,
                 top = this.Bounds.Top,
@@ -260,7 +264,7 @@ namespace Be.HexEditor.Core
             };
 
             // Get handle to monitor that has the largest intersection with the rectangle.
-            IntPtr handleMonitor = W32.MonitorFromRect(ref rect, W32.MONITOR_DEFAULTTONULL);
+            HMONITOR handleMonitor = PInvoke.MonitorFromRect(in rect, MONITOR_FROM_FLAGS.MONITOR_DEFAULTTONULL);
 
             if (handleMonitor != IntPtr.Zero)
             {
@@ -279,7 +283,7 @@ namespace Be.HexEditor.Core
         public float Factor
         {
             get { return _factor; }
-            private set 
+            private set
             {
                 if (_factor == value)
                     return;
@@ -320,7 +324,7 @@ namespace Be.HexEditor.Core
 
             CoreUtil.ScaleFont(this, factor);
 
-            foreach(var item in dic)
+            foreach (var item in dic)
             {
                 // not affected by parent font?
                 if (item.Key.Font.Size == item.Value)
@@ -355,17 +359,17 @@ namespace Be.HexEditor.Core
         float GetDpiWindowMonitor()
         {
             // Get handle to this window.
-            IntPtr handleWindow = Process.GetCurrentProcess().MainWindowHandle;
+            HWND handleWindow = (HWND)Process.GetCurrentProcess().MainWindowHandle;
 
             // Get handle to monitor.
-            IntPtr handleMonitor = W32.MonitorFromWindow(handleWindow, W32.MONITOR_DEFAULTTOPRIMARY);
+            HMONITOR handleMonitor = PInvoke.MonitorFromWindow(handleWindow, MONITOR_FROM_FLAGS.MONITOR_DEFAULTTOPRIMARY);
 
             // Get DPI.
             return GetDpiSpecifiedMonitor(handleMonitor);
         }
 
         // Get DPI of a specified monitor by GetDpiForMonitor.
-        float GetDpiSpecifiedMonitor(IntPtr handleMonitor)
+        float GetDpiSpecifiedMonitor(HMONITOR handleMonitor)
         {
             // Check if GetDpiForMonitor function is available.
             if (!IsEightOneOrNewer()) return this.CurrentAutoScaleDimensions.Width;
@@ -374,9 +378,9 @@ namespace Be.HexEditor.Core
             uint dpiX = 0;
             uint dpiY = 0;
 
-            int result = W32.GetDpiForMonitor(handleMonitor, W32.Monitor_DPI_Type.MDT_Default, out dpiX, out dpiY);
+            HRESULT result = PInvoke.GetDpiForMonitor(handleMonitor, MONITOR_DPI_TYPE.MDT_DEFAULT, out dpiX, out dpiY);
 
-            if (result != 0) // If not S_OK (= 0)
+            if (result.Failed) // If not S_OK (= 0)
             {
                 throw new Exception("Failed to get DPI of monitor containing this window.");
             }
@@ -388,18 +392,19 @@ namespace Be.HexEditor.Core
         float GetDpiDeviceMonitor()
         {
             int dpiX = 0;
-            IntPtr screen = IntPtr.Zero;
+            HDC screen = new HDC();
 
             try
             {
-                screen = W32.GetDC(IntPtr.Zero);
-                dpiX = W32.GetDeviceCaps(screen, W32.LOGPIXELSX);
+                screen = PInvoke.GetDC(HWND.Null);
+                dpiX = PInvoke.GetDeviceCaps(screen, GET_DEVICE_CAPS_INDEX.LOGPIXELSX);
             }
             finally
             {
+                int result;
                 if (screen != IntPtr.Zero)
                 {
-                    W32.ReleaseDC(IntPtr.Zero, screen);
+                    result = PInvoke.ReleaseDC(HWND.Null, screen);
                 }
             }
 

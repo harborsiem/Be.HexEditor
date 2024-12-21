@@ -123,7 +123,7 @@
   <data name="rbHex.Text" xml:space="preserve">
     <value>16 進数</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="groupBox1.Text" xml:space="preserve">
     <value>検索</value>
   </data>
   <data name="btnOK.Text" xml:space="preserve">
@@ -150,10 +150,10 @@
   <data name="resource.CopyMenuItemText" xml:space="preserve">
     <value>コピー</value>
   </data>
-  <data name="resource.PasteMenuItemText" xml:space="preserve">
+  <data name="resource.CutMenuItemText" xml:space="preserve">
     <value>貼り付け</value>
   </data>
-  <data name="resource.CutMenuItemText" xml:space="preserve">
+  <data name="resource.PasteMenuItemText" xml:space="preserve">
     <value>切り取り</value>
   </data>
   <data name="resource.SelectAllMenuItemText" xml:space="preserve">

@@ -20,7 +20,7 @@ namespace Be.HexEditor
 
 			Init();
 
-            hexBox.Font = new Font(SystemFonts.MessageBoxFont.FontFamily, SystemFonts.MessageBoxFont.Size, SystemFonts.MessageBoxFont.Style);
+            //hexBox.Font = new Font(SystemFonts.MessageBoxFont.FontFamily, SystemFonts.MessageBoxFont.Size, SystemFonts.MessageBoxFont.Style);
 
 			this.toolStrip.Renderer.RenderToolStripBorder += new ToolStripRenderEventHandler(Renderer_RenderToolStripBorder);
         }
@@ -107,7 +107,9 @@ namespace Be.HexEditor
             }
             else
             {
+#pragma warning disable CA1303
                 this.Text = Program.SoftwareName;
+#pragma warning restore CA1303
             }
         }
 
