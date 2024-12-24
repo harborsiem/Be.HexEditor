@@ -5,7 +5,7 @@
     <ApplicationVersion>2.0.0</ApplicationVersion>
     <ApplicationRevision>0</ApplicationRevision>
     <AssemblyTitle>Be.Windows.Forms.HexBox</AssemblyTitle>
-    <PublisherName>The Melding Wars</PublisherName>
+    <PublisherName>The Melding Wars, harborsiem</PublisherName>
     <Company>Be</Company>
     <Product>Windows.Forms.HexBox.Net8 (MIT)</Product>
     <Description>HEX editor control for Windows Forms</Description>
@@ -15,11 +15,12 @@
     <AssemblyVersion>2.0.0</AssemblyVersion>
     <FileVersion>2.0.0</FileVersion>
     <DocumentationFile>bin\$(Configuration)\Be.Windows.Forms.HexBox.xml</DocumentationFile>
-    <Authors>The Melding Wars</Authors>
+    <Authors>The Melding Wars, harborsiem</Authors>
     <Version>2.0.0</Version>
     <PackageId>Be.Windows.Forms.HexBox.Net8</PackageId>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>HexBox.snk</AssemblyOriginatorKeyFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
