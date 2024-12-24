@@ -10,7 +10,9 @@
 
     <Feature Id="ProductFeature" Title="HexEditor Setup" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
-		<ComponentGroupRef Id="Runtimes" />
+		<!--
+        <ComponentGroupRef Id="Runtimes" />
+        -->
 		<ComponentGroupRef Id="LanguageDe" />
 		<ComponentGroupRef Id="LanguageIt" />
 		<ComponentGroupRef Id="LanguageJa" />
@@ -41,8 +43,10 @@
   <Fragment>
       <StandardDirectory Id="ProgramFiles64Folder">
         <Directory Id="Di.INSTALLFOLDER" Name="Be.HexEditor">
-			<Directory Id="Di.RuntimeFolder" Name="runtimes\win\lib\net8.0">
+			<!--
+            <Directory Id="Di.RuntimeFolder" Name="runtimes\win\lib\net8.0">
 			</Directory>
+            -->
 			<Directory Id="Di.LanguageDe" Name="de"></Directory>
 			<Directory Id="Di.LanguageIt" Name="it"></Directory>
 			<Directory Id="Di.LanguageJa" Name="ja"></Directory>
@@ -64,7 +68,9 @@
 		  <File Id="Fi.HexBoxDll" Name="Be.Windows.Forms.HexBox.dll" Source="..\Be.HexEditor\bin\Release\net8.0-windows\Be.Windows.Forms.HexBox.dll" Checksum="yes" />
 		  <File Id="Fi.HexEditorDeps" Name="Be.HexEditor.deps.json" Source="..\Be.HexEditor\bin\Release\net8.0-windows\Be.HexEditor.deps.json" Checksum="yes" />
 		  <File Id="Fi.HexEditorRuntimeconfig" Name="Be.HexEditor.runtimeconfig.json" Source="..\Be.HexEditor\bin\Release\net8.0-windows\Be.HexEditor.runtimeconfig.json" Checksum="yes" />
-		  <File Id="Fi.CodePages" Name="System.Text.Encoding.CodePages.dll" Source="..\Be.HexEditor\bin\Release\net8.0-windows\System.Text.Encoding.CodePages.dll" Checksum="yes" />
+		  <!--
+          <File Id="Fi.CodePages" Name="System.Text.Encoding.CodePages.dll" Source="..\Be.HexEditor\bin\Release\net8.0-windows\System.Text.Encoding.CodePages.dll" Checksum="yes" />
+          -->
 	  </Component>
     </ComponentGroup>
   </Fragment>
@@ -78,13 +84,15 @@
     </ComponentGroup>
   </Fragment>
 
-	<Fragment>
+	<!--
+    <Fragment>
 		<ComponentGroup Id="Runtimes" Directory="Di.RuntimeFolder">
 			<Component Id="C.Runtimes">
 				<File Id="Fi.RuntimeCodePages" Name="System.Text.Encoding.CodePages.dll" Source="..\Be.HexEditor\bin\Release\net8.0-windows\runtimes\win\lib\net8.0\System.Text.Encoding.CodePages.dll" />
 			</Component>
 		</ComponentGroup>
 	</Fragment>
+    -->
 
 	<Fragment>
 		<ComponentGroup Id="LanguageDe" Directory="Di.LanguageDe">

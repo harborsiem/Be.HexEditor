@@ -5,7 +5,7 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
 	<ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
-    <SupportUrl>https://github.com/themeldingwars/Be.HexEditor</SupportUrl>
+    <SupportUrl>https://github.com/harborsiem/Be.HexEditor</SupportUrl>
     <ProductName>Be.HexEditor</ProductName>
     <PublisherName>Bernhard Elbl</PublisherName>
     <ApplicationVersion>2.0.0</ApplicationVersion>
@@ -287,9 +287,11 @@
     <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.106" PrivateAssets="all" />
   </ItemGroup>
 
+<!--
   <ItemGroup>
     <PackageReference Include="System.Text.Encoding.CodePages" Version="9.0.0" />
   </ItemGroup>
+  -->
   <ItemGroup>
     <ProjectReference Include="..\Be.Windows.Forms.HexBox\Be.Windows.Forms.HexBox.csproj" />
   </ItemGroup>

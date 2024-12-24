@@ -9,6 +9,8 @@
     <Company>Be</Company>
     <Product>Windows.Forms.HexBox.Net8 (MIT)</Product>
     <Description>HEX editor control for Windows Forms</Description>
+	<PackageReadmeFile>PackageReadme.md</PackageReadmeFile>
+	<PackageReleaseNotes></PackageReleaseNotes>
     <Copyright>Copyright (c) 2011-2024 Bernhard Elbl</Copyright>
     <AssemblyVersion>2.0.0</AssemblyVersion>
     <FileVersion>2.0.0</FileVersion>
@@ -16,6 +18,8 @@
     <Authors>The Melding Wars</Authors>
     <Version>2.0.0</Version>
     <PackageId>Be.Windows.Forms.HexBox.Net8</PackageId>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>HexBox.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -60,8 +64,18 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.6.0" />
+  </ItemGroup>
+
   <!--ItemGroup>
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
     <PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
   </ItemGroup-->
+  
+ 
+  <ItemGroup>
+    <None Include=".\PackageReadme.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
 </Project>
