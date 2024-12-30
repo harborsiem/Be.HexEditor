@@ -40,6 +40,8 @@
     <PreBuildEvent />
     <PostBuildEvent />
     <Version>2.0.0</Version>
+    <SignAssembly>False</SignAssembly>
+    <AssemblyOriginatorKeyFile>Be.HexEditor.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Remove="W32.cs" />

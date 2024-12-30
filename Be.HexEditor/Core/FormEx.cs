@@ -79,7 +79,10 @@ namespace Be.HexEditor.Core
         void AdjustWindowInitial()
         {
             // Hold initial DPI used at loading this window.
-            DpiOld = this.CurrentAutoScaleDimensions.Width;
+            if (AutoScaleMode == AutoScaleMode.Dpi)
+                DpiOld = this.CurrentAutoScaleDimensions.Width;
+            else
+                DpiOld = DpiAtDesign;
 
             // Check current DPI.
             DpiNew = GetDpiWindowMonitor();

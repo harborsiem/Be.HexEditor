@@ -353,26 +353,16 @@
   <data name="pasteToolStripSplitButton.Text" xml:space="preserve">
     <value>Вставить</value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAIAEBAQAAAAAAAoAQAAJgAAACAgEAAAAAAA6AIAAE4BAAAoAAAAEAAAACAAAAABAAQAAAAAAIAA
-        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
-        AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAD/////////AP////////8A/////////wD/AA//AA
-        //APD/8P/w//8A8P/w//Dw/wDw//D/8AD/APD/8P/w8P8A8P/w//D/DwD/AA//AAAPAP////////8A//
-        ///////wD/////////AP////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAA
-        AAAAAAAAEAAAABAAAAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDAwAAAAP8AAP8AAAD/
-        /wD/AAAA/wD/AP//AAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////////
-        ////////////////////////////////////////////////////////////AAD///8AAAAA////////
-        8AAAD///AAAAAP///////wD//wD///8A//////////8A//8A////AP/////////wD///8A///wD/AP//
-        ////8A////AP//8A/wD///////AP///wD///AAAA///////wD///8A///wAAAP//////8A////AP//8A
-        /wD///////AP///wD///AP8A/wD////wD///8A///wD///8A/////wD//wD///8A////AP////8A//8A
-        //8AAAAAAAD/////8AAAD///AAAAAAAA//////8AAP//////////////////////////////////////
-        ////////////////////////////////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////
-        //////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//////////////////////////w==
-</value>
+  <data name="hexBox.BuiltInContextMenu.CopyMenuItemText" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="hexBox.BuiltInContextMenu.CutMenuItemText" xml:space="preserve">
+    <value>Вырезать</value>
+  </data>
+  <data name="hexBox.BuiltInContextMenu.PasteMenuItemText" xml:space="preserve">
+    <value>Вставить</value>
+  </data>
+  <data name="hexBox.BuiltInContextMenu.SelectAllMenuItemText" xml:space="preserve">
+    <value>Выбрать все</value>
   </data>
 </root>

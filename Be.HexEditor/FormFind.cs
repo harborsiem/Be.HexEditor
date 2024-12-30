@@ -31,13 +31,6 @@ namespace Be.HexEditor
 			ValidateFind();
 		}
 
-		#region Windows Form Designer generated code
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		#endregion
-
 		private FindOptions _findOptions;
 
 		public FindOptions FindOptions
@@ -211,11 +204,6 @@ namespace Be.HexEditor
 			string text = percent.ToString("0.00", nfi) + " %";
 			lblPercent.Text = text;
 		}
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
 	}
 }

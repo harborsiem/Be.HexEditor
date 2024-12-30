@@ -129,6 +129,9 @@
   <data name="btnCancel.Text" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
+  <data name="chkMatchCase.Text" xml:space="preserve">
+    <value>Exakter Vergleich</value>
+  </data>
   <data name="hexFind.BuiltInContextMenu.CopyMenuItemText" xml:space="preserve">
     <value>Kopieren</value>
   </data>
