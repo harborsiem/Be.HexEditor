@@ -10,7 +10,7 @@ This repository also includes the following additions:
 
 - Changes made by [Jaroslav Imrich](https://github.com/Pkcs11Admin/Be.HexEditor) for the NuGet package
 - The ability to color regions in the hex view with a different background color as can be seen below
-- Update to .NET5
+- Update to .NET8
 
 ![alt text](/Media/preview.png "Preview")
 
@@ -20,14 +20,14 @@ This repository also includes the following additions:
 HexView.HighlightedRegions.Add(new HighlightedRegion(0, 12, Color.Purple));
 ```
 
-## Create NuGet Package
+## NuGet Package
 
-[Download nuget.exe](https://www.nuget.org/downloads)
+[Nuget package for HexBox](https://www.nuget.org/packages/be.windows.forms.hexbox.net8)
+Versions for
+- .NET Framework 4.6.2 and higher
+- .NET 8.0 and higher
+available
 
-```
-cd Be.Windows.Forms.HexBox
-nuget pack Be.Windows.Forms.HexBox.csproj -Prop Configuration=Release
-```
 
 ## License
 
