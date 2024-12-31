@@ -23,9 +23,12 @@ HexView.HighlightedRegions.Add(new HighlightedRegion(0, 12, Color.Purple));
 ## NuGet Package
 
 [Nuget package for HexBox](https://www.nuget.org/packages/be.windows.forms.hexbox.net8)
+
 Versions for
+
 - .NET Framework 4.6.2 and higher
 - .NET 8.0 and higher
+
 available
 
 
