@@ -8,16 +8,17 @@
     <SupportUrl>https://github.com/harborsiem/Be.HexEditor</SupportUrl>
     <ProductName>Be.HexEditor</ProductName>
     <PublisherName>Bernhard Elbl</PublisherName>
-    <ApplicationVersion>2.0.0</ApplicationVersion>
+    <ApplicationVersion>2.0.1</ApplicationVersion>
     <ApplicationRevision>0</ApplicationRevision>
     <AssemblyTitle>Be.HexEditor</AssemblyTitle>
     <Company>Be</Company>
     <Product>Be.HexEditor (MIT)</Product>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Description>View and edit files in hex format</Description>
-    <Copyright>Copyright (c) 2011-2024 Bernhard Elbl</Copyright>
+    <Copyright>Copyright (c) 2011-2025 Bernhard Elbl</Copyright>
     <AssemblyVersion>2.0.0</AssemblyVersion>
-    <FileVersion>2.0.0</FileVersion>
+    <FileVersion>2.0.1</FileVersion>
+    <ProductVersion>2.0.1</ProductVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -39,7 +40,7 @@
   <PropertyGroup>
     <PreBuildEvent />
     <PostBuildEvent />
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <SignAssembly>False</SignAssembly>
     <AssemblyOriginatorKeyFile>Be.HexEditor.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -286,7 +287,7 @@
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.106" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.217" PrivateAssets="all" />
   </ItemGroup>
 
 <!--

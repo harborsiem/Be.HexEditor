@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Reflection;
 using System.IO;
+using System.Diagnostics;
 
 namespace Be.HexEditor
 {
@@ -17,7 +18,14 @@ namespace Be.HexEditor
             InitializeComponent();
 
             // TODO: Add any initialization after the InitializeComponent call
-
+#if Ribbon
+            lblAuthor.Text = "Bernhard Elbl, harborsiem";
+            lnkWorkspace.Text = "https://github.com/harborsiem/HexEdit-Ribbon";
+#else
+            lblAuthor.Text = "Bernhard Elbl";
+            lnkWorkspace.Text = "https://sourceforge.net/projects/hexbox";
+#endif
+            lnkWorkspace.TabStop = true;
             try
             {
                 Assembly ca = Assembly.GetExecutingAssembly();
@@ -44,10 +52,11 @@ namespace Be.HexEditor
                     txtChanges.LoadFile(resourceStream, RichTextBoxStreamType.PlainText);
                 }
 
-                Version version = ca.GetName().Version;
-                if (version != null)
+                FileVersionInfo info = FileVersionInfo.GetVersionInfo(ca.Location);
+                //Version version = ca.GetName().Version;
+                if (info != null)
                 {
-                    lblVersion.Text = version.ToString();
+                    lblVersion.Text = info.FileVersion;
                 }
             }
             catch (Exception)

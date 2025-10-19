@@ -80,7 +80,6 @@
             lnkWorkspace.BackColor = System.Drawing.Color.White;
             lnkWorkspace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             lnkWorkspace.Name = "lnkWorkspace";
-            lnkWorkspace.TabStop = true;
             lnkWorkspace.LinkClicked += lnkCompany_LinkClicked;
             // 
             // label7

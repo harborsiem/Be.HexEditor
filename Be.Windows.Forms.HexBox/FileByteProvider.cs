@@ -20,7 +20,7 @@ namespace Be.Windows.Forms
 			/// </summary>
 			public byte this[long index]
 			{
-				get { return (byte)this.Dictionary[index]; }
+				get { return (byte)Dictionary[index]; }
 				set { Dictionary[index] = value; }
 			}
 
@@ -261,7 +261,7 @@ namespace Be.Windows.Forms
 		}
 
 		/// <summary>
-		/// 
+		/// Dispose pattern
 		/// </summary>
 		/// <param name="disposing"></param>
 		protected virtual void Dispose(bool disposing)

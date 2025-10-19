@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFrameworks>net8.0-windows;net462</TargetFrameworks>
     <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationVersion>2.0.0</ApplicationVersion>
+    <ApplicationVersion>2.1.0</ApplicationVersion>
     <ApplicationRevision>0</ApplicationRevision>
     <AssemblyTitle>Be.Windows.Forms.HexBox</AssemblyTitle>
     <PublisherName>The Melding Wars, harborsiem</PublisherName>
@@ -11,16 +11,17 @@
     <Description>HEX editor control for Windows Forms</Description>
 	<PackageReadmeFile>PackageReadme.md</PackageReadmeFile>
 	<PackageReleaseNotes></PackageReleaseNotes>
-    <Copyright>Copyright (c) 2011-2024 Bernhard Elbl</Copyright>
+    <Copyright>Copyright (c) 2011-2025 Bernhard Elbl</Copyright>
     <AssemblyVersion>2.0.0</AssemblyVersion>
-    <FileVersion>2.0.0</FileVersion>
+    <FileVersion>2.1.0</FileVersion>
     <DocumentationFile>bin\$(Configuration)\Be.Windows.Forms.HexBox.xml</DocumentationFile>
     <Authors>The Melding Wars, harborsiem</Authors>
-    <Version>2.0.0</Version>
+    <Version>2.1.0</Version>
     <PackageId>Be.Windows.Forms.HexBox.Net8</PackageId>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>HexBox.snk</AssemblyOriginatorKeyFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -59,14 +60,14 @@
     <None Include="HexBox.snk" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.106">
+    <PackageReference Include="Microsoft.Windows.CsWin32" Version="0.3.217">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Memory" Version="4.6.0" />
+    <PackageReference Include="System.Memory" Version="4.6.3" />
   </ItemGroup>
 
   <!--ItemGroup>

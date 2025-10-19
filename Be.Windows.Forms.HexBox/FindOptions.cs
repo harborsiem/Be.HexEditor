@@ -17,10 +17,25 @@ namespace Be.Windows.Forms
 		Hex 
 	}
 
-	/// <summary>
-	/// Defines all state information nee
-	/// </summary>
-	public class FindOptions
+    /// <summary>
+    /// Define the direction of Find
+    /// </summary>
+    public enum Direction
+    {
+        /// <summary>
+        /// find forward
+        /// </summary>
+        Forward,
+        /// <summary>
+        /// find backward
+        /// </summary>
+        Backward,
+    }
+
+    /// <summary>
+    /// Defines all state information needed
+    /// </summary>
+    public class FindOptions
 	{
 		/// <summary>
 		/// Gets or sets whether the Find options are valid
@@ -78,12 +93,18 @@ namespace Be.Windows.Forms
 		/// Gets or sets the type what should be searched.
 		/// </summary>
 		public FindType Type { get; set; }
-		/// <summary>
-		/// Updates the find buffer.
-		/// </summary>
-		void UpdateFindBuffer()
+        /// <summary>
+        /// Determine the direction of find
+        /// </summary>
+        public Direction FindDirection { get; set; }
+        /// <summary>
+        /// Updates the find buffer.
+        /// </summary>
+        void UpdateFindBuffer()
 		{
-			string text = this.Text != null ? this.Text : string.Empty;
+			string text = Text != null ? Text : string.Empty;
+			//Encoding encoding = Encoding.Unicode;
+			//FindBuffer = encoding.GetBytes(text);
 			FindBuffer = ASCIIEncoding.ASCII.GetBytes(text);
 			FindBufferLowerCase = ASCIIEncoding.ASCII.GetBytes(text.ToLower());
 			FindBufferUpperCase = ASCIIEncoding.ASCII.GetBytes(text.ToUpper());

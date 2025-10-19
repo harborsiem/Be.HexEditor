@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 using System.Globalization;
@@ -11,6 +12,8 @@ namespace Be.HexEditor
         public const string SoftwareName = "Be.HexEditor";
 
         public static FormHexEditor ApplicationForm;
+        public const string MonospacedFont = "Consolas"; //"Courier New";
+        public const float MonospacedFontSize = 10f;
 
         [STAThread()]
         static void Main(string[] args)

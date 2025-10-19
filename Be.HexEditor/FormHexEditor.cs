@@ -18,9 +18,9 @@ namespace Be.HexEditor
         {
             InitializeComponent();
 
-			Init();
+            hexBox.Font = new Font(new FontFamily(Program.MonospacedFont), Program.MonospacedFontSize, FontStyle.Regular);
 
-            //hexBox.Font = new Font(SystemFonts.MessageBoxFont.FontFamily, SystemFonts.MessageBoxFont.Size, SystemFonts.MessageBoxFont.Style);
+            Init();
 
 			this.toolStrip.Renderer.RenderToolStripBorder += new ToolStripRenderEventHandler(Renderer_RenderToolStripBorder);
         }

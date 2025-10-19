@@ -1,5 +1,10 @@
 Version history
 
+2.0.1
+- Font for HexBox and BitControl is set to Consolas, 10pt
+- Some internal improvements
+- Some language translations missing (Todo, need help)
+
 2.0.0
 - New feature: Update project and dependencies to .NET 8
 - Font for HexBox set to Consolas

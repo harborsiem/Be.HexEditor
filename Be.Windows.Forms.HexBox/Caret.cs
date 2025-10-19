@@ -11,6 +11,9 @@ namespace Be.Windows.Forms
         {
             try
             {
+                //GC.Collect();
+                //GC.WaitForPendingFinalizers();
+                //GC.Collect();
                 return PInvoke.CreateCaret(new HWND(hWnd), new HBITMAP(hBitmap), nWidth, nHeight);
             }
             catch (Exception ex)
@@ -27,6 +30,9 @@ namespace Be.Windows.Forms
         {
             try
             {
+                //GC.Collect();
+                //GC.WaitForPendingFinalizers();
+                //GC.Collect();
                 return PInvoke.ShowCaret(new HWND(hWnd));
             }
             catch (Exception ex)
@@ -43,6 +49,9 @@ namespace Be.Windows.Forms
         {
             try
             {
+                //GC.Collect();
+                //GC.WaitForPendingFinalizers();
+                //GC.Collect();
                 return PInvoke.DestroyCaret();
             }
             catch (Exception ex)
@@ -59,6 +68,9 @@ namespace Be.Windows.Forms
         {
             try
             {
+                //GC.Collect();
+                //GC.WaitForPendingFinalizers();
+                //GC.Collect();
                 return PInvoke.SetCaretPos(X, Y);
             }
             catch (Exception ex)

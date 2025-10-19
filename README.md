@@ -26,8 +26,8 @@ HexView.HighlightedRegions.Add(new HighlightedRegion(0, 12, Color.Purple));
 
 Versions for
 
-- .NET Framework 4.6.2 and higher
-- .NET 8.0 and higher
+- .NET Framework 4.6.2 and later
+- .NET 8.0 and later
 
 available
 

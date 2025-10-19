@@ -176,9 +176,6 @@
   <data name="pnBitsEditor.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="pnBitsEditor.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9pt</value>
-  </data>
   <data name="pnBitsEditor.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 23</value>
   </data>
@@ -187,13 +184,13 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="pnBitsEditor.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>125, 23</value>
+    <value>135, 23</value>
   </data>
   <data name="pnBitsEditor.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
   </data>
   <data name="pnBitsEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 23</value>
+    <value>135, 23</value>
   </data>
   <data name="pnBitsEditor.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -237,9 +234,6 @@
   <data name="&gt;&gt;flowLayoutPanel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="pnBitsHeader.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 9pt</value>
-  </data>
   <data name="pnBitsHeader.Location" type="System.Drawing.Point, System.Drawing">
     <value>66, 0</value>
   </data>
@@ -247,13 +241,13 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="pnBitsHeader.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>125, 23</value>
+    <value>135, 23</value>
   </data>
   <data name="pnBitsHeader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>
   </data>
   <data name="pnBitsHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 23</value>
+    <value>135, 23</value>
   </data>
   <data name="pnBitsHeader.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

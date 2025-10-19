@@ -126,7 +126,7 @@
     <value>6, 47</value>
   </data>
   <data name="txtFind.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 23</value>
+    <value>400, 23</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtFind.TabIndex" type="System.Int32, mscorlib">
@@ -214,7 +214,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnOK.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 3</value>
+    <value>233, 3</value>
   </data>
   <data name="btnOK.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>88, 26</value>
@@ -250,7 +250,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 3</value>
+    <value>327, 3</value>
   </data>
   <data name="btnCancel.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>88, 26</value>
@@ -280,7 +280,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblPercent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>26, 0</value>
+    <value>71, 0</value>
   </data>
   <data name="lblPercent.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 26</value>
@@ -307,7 +307,7 @@
     <value>NoControl</value>
   </data>
   <data name="lblFinding.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 0</value>
+    <value>152, 0</value>
   </data>
   <data name="lblFinding.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 26</value>
@@ -388,7 +388,7 @@
     <value>6, 101</value>
   </data>
   <data name="hexFind.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 117</value>
+    <value>400, 117</value>
   </data>
   <data name="hexFind.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -419,7 +419,7 @@
     <value>0, 0, 0, 0</value>
   </data>
   <data name="flowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>373, 32</value>
+    <value>418, 32</value>
   </data>
   <data name="flowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -443,7 +443,7 @@
     <value>12, 12</value>
   </data>
   <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>367, 253</value>
+    <value>412, 253</value>
   </data>
   <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -470,7 +470,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>391, 309</value>
+    <value>436, 309</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

@@ -1,5 +1,6 @@
 using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
 using Be.Windows.Forms;
@@ -18,10 +19,12 @@ namespace Be.HexEditor
 			//
 			InitializeComponent();
 
-			//
-			// TODO: Add any constructor code after InitializeComponent call
-			//
-			rbString.CheckedChanged += new EventHandler(rb_CheckedChanged);
+            //
+            // TODO: Add any constructor code after InitializeComponent call
+            //
+            hexFind.Font = new Font(new FontFamily(Program.MonospacedFont), Program.MonospacedFontSize, FontStyle.Regular);
+
+            rbString.CheckedChanged += new EventHandler(rb_CheckedChanged);
 			rbHex.CheckedChanged += new EventHandler(rb_CheckedChanged);
 
 		}

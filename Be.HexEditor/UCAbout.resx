@@ -202,9 +202,6 @@
   <data name="lblAuthor.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="lblAuthor.Text" xml:space="preserve">
-    <value>Bernhard Elbl</value>
-  </data>
   <data name="&gt;&gt;lblAuthor.Name" xml:space="preserve">
     <value>lblAuthor</value>
   </data>
@@ -267,9 +264,6 @@
   </data>
   <data name="lnkWorkspace.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="lnkWorkspace.Text" xml:space="preserve">
-    <value>https://sourceforge.net/projects/hexbox</value>
   </data>
   <data name="&gt;&gt;lnkWorkspace.Name" xml:space="preserve">
     <value>lnkWorkspace</value>

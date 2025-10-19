@@ -9,7 +9,6 @@ namespace Be.HexEditor
     public partial class BitControl : UserControl
     {
         List<RichTextBox> _txtBits = new List<RichTextBox>();
-        const float ConsolasFontSize = 9f;
         public event EventHandler BitChanged;
 
         protected virtual void OnBitChanged(EventArgs e)
@@ -28,6 +27,7 @@ namespace Be.HexEditor
                 components = new System.ComponentModel.Container();
             _innerBorderHeaderPanel = new Panel();
             _innerBorderHeaderPanel.Dock = DockStyle.Fill;
+            _innerBorderHeaderPanel.Font = new Font(new FontFamily(Program.MonospacedFont), Program.MonospacedFontSize, FontStyle.Regular);
             _innerBorderHeaderPanel.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
 
             _innerBorderPanel = new Panel();
@@ -37,11 +37,14 @@ namespace Be.HexEditor
 
             InitializeComponent();
 
+            pnBitsEditor.Font = new Font(new FontFamily(Program.MonospacedFont), Program.MonospacedFontSize, FontStyle.Regular);
+            pnBitsHeader.Font = new Font(new FontFamily(Program.MonospacedFont), Program.MonospacedFontSize, FontStyle.Regular);
             pnBitsEditor.BackColor = System.Windows.Forms.VisualStyles.VisualStyleInformation.TextControlBorder;
 
 
             pnBitsHeader.Controls.Add(_innerBorderHeaderPanel);
             components.Add(_innerBorderHeaderPanel);
+            components.Add(_innerBorderPanel);
 
             bool first = true;
             Size size = new Size();
@@ -51,7 +54,7 @@ namespace Be.HexEditor
                 Label lbl = new Label();
                 lbl.Tag = i;
                 lbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                lbl.Font = new System.Drawing.Font("Consolas", ConsolasFontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                lbl.Font = new System.Drawing.Font(Program.MonospacedFont, Program.MonospacedFontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 lbl.Margin = new System.Windows.Forms.Padding(0);
 
                 lbl.Name = "lbl" + i.ToString();
@@ -63,7 +66,6 @@ namespace Be.HexEditor
                 lbl.Enter += new System.EventHandler(this.txt_Enter);
                 lbl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_KeyDown);
                 _innerBorderHeaderPanel.Controls.Add(lbl);
-                components.Add(_innerBorderPanel);
 
                 if (first)
                 {
@@ -85,7 +87,7 @@ namespace Be.HexEditor
                 RichTextBox txt = new RichTextBox();
                 txt.Tag = i;
                 txt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-                txt.Font = new System.Drawing.Font("Consolas", ConsolasFontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                txt.Font = new System.Drawing.Font(Program.MonospacedFont, Program.MonospacedFontSize, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 txt.Margin = new System.Windows.Forms.Padding(0);
 
                 txt.MaxLength = 1;
